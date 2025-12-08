@@ -1,0 +1,49 @@
+:root{
+    --principal-color: #152237;
+
+    --border-radius: 6px;
+}
+
+*{
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+}
+
+header{
+    background-color: var(--principal-color);
+    height: 80px;
+    width: 100%;
+    align-content: center;
+    justify-items: center;
+
+    nav{
+
+        display: flex;
+        width: 80%;
+        place-content: space-evenly;
+
+        img{
+            height: 31px;
+            width: 84px;
+        }
+
+        a{
+            color: white;
+        }
+
+        input{
+            width: 477px;
+            height: 40px;
+            border: solid white 1px;
+            background-color: var(--principal-color);
+            border-radius: var(--border-radius);
+        }
+
+        button{
+            width: 130px;
+            height: 40px;
+            border-radius: var(--border-radius);
+        }
+    }
+}
