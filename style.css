@@ -9,6 +9,8 @@
   list-style: none;
   margin: 0%;
   padding: 0%;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
 
   a {
     color: white;
@@ -100,23 +102,23 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
-  background-image: url('img/bg-header.png');
+  background-image: url("img/bg-header.png");
   background-size: cover;
   background-position: center;
 
-  h1{
+  h1 {
     color: var(--principal-color);
     font-size: 48px;
-    font-weight: bolder;
+    font-weight: 1000;
     margin-bottom: 25px;
   }
 
-  p{
+  p {
     color: black;
     font-size: 20px;
   }
 
-  button{
+  button {
     margin-top: 27px;
     width: 130px;
     height: 40px;
@@ -130,7 +132,7 @@ header {
 }
 
 #heroSection::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -144,4 +146,178 @@ header {
 #heroSection > * {
   position: relative;
   z-index: 1;
+}
+
+#popFormations {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 50px;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--principal-color);
+    margin-bottom: 40px;
+  }
+
+  #container {
+    display: flex;
+    gap: 92px;
+  }
+
+  .card {
+    width: 307px;
+    height: 362px;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .formationInfo {
+      padding: 15px;
+
+      h3 {
+        font-size: 20px;
+        color: var(--principal-color);
+        margin-bottom: 10px;
+        margin-top: 10px;
+          font-weight: bolder;
+      }
+
+      p{
+        font-size: 16px;
+      }
+
+      .prixFormPop {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        position: absolute;
+        top: 180px;
+        right: 8px;
+        background-color: #1f2937;
+        padding: 0px 9px;
+        border-radius: 25px;
+        z-index: 10;
+        box-shadow: black 0px 2px 3px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+        .valueAfter {
+          color: white;
+          font-size: 20px;
+          font-weight: 700;
+          margin: 0;
+        }
+
+        .valueBefore {
+          color: #9ca3af;
+          font-size: 14px;
+          text-decoration: line-through;
+          margin: 0;
+        }
+
+        
+      }
+      .fa-star {
+        color: #ffc700;
+        opacity: 0.3;
+        font-size: 14px;
+      }
+
+      .fa-star.checked {
+        color: #ffc700;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+#formationsRecentes {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 50px;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--principal-color);
+    margin-bottom: 40px;
+  }
+
+  #container {
+    display: flex;
+    gap: 30px;
+  }
+
+  .card {
+    width: 307px;
+    height: 362px;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .formationInfo {
+      padding: 15px;
+
+      h3 {
+        font-size: 20px;
+        color: var(--principal-color);
+        margin-bottom: 10px;
+      }
+
+      .prixFormPop {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        position: absolute;
+        top: 180px;
+        right: 8px;
+        background-color: #1f2937;
+        padding: 8px 16px;
+        border-radius: 25px;
+        z-index: 10;
+        box-shadow: black 0px 2px 3px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+        .valueAfter {
+          color: white;
+          font-size: 16px;
+          font-weight: 700;
+          margin: 0;
+        }
+
+        .valueBefore {
+          color: #9ca3af;
+          font-size: 14px;
+          text-decoration: line-through;
+          margin: 0;
+        }
+
+        h3 {
+          font-weight: bolder;
+        }
+      }
+      .fa-star {
+        color: #ffc700;
+        opacity: 0.3;
+        font-size: 14px;
+      }
+
+      .fa-star.checked {
+        color: #ffc700;
+        opacity: 1;
+      }
+    }
+  }
 }
