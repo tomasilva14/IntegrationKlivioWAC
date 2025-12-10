@@ -7,7 +7,10 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Klivio</title>
   </head>
@@ -139,7 +142,9 @@
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
-              <p class="descriptionForm">Améliorez vos échanges et votre impact relationnel</p>
+              <p class="descriptionForm">
+                Améliorez vos échanges et votre impact relationnel
+              </p>
             </div>
           </article>
           <article class="card">
@@ -156,7 +161,9 @@
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
-              <p class="descriptionForm">Développez calme et intelligence émotionnelle</p>
+              <p class="descriptionForm">
+                Développez calme et intelligence émotionnelle
+              </p>
             </div>
           </article>
           <article class="card">
@@ -173,7 +180,9 @@
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star"></span>
-              <p class="descriptionForm">Analysez, décidez et trouvez des solutions durables</p>
+              <p class="descriptionForm">
+                Analysez, décidez et trouvez des solutions durables
+              </p>
             </div>
           </article>
           <article class="card">
@@ -190,7 +199,9 @@
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star"></span>
-              <p class="descriptionForm">Inspirez, motivez et fédérez votre équipe</p>
+              <p class="descriptionForm">
+                Inspirez, motivez et fédérez votre équipe
+              </p>
             </div>
           </article>
         </div>
@@ -204,11 +215,13 @@
           <article class="cardReview">
             <img src="img/juliette.png" alt="Profil Pic juliette" />
             <h3>Juliette</h3>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
+            <div class="rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+            </div>
             <p>
               J’ai trouvé le parcours très bien structuré : vidéos courtes,
               quizzes pertinents et projets pratiques qui m’ont permis
@@ -220,11 +233,13 @@
           <article class="cardReview">
             <img src="img/camille.png" alt="Profil Pic Camille" />
             <h3>Camille</h3>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
+            <div class="rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+            </div>
             <p>
               Bon équilibre entre théorie et pratique. Les chapitres sont
               détaillés, et le support et les corrections automatiques ont
@@ -237,32 +252,95 @@
       <!-- Les avantages klivio -->
       <article id="advantage">
         <h2>Les avantages klivio</h2>
-        <div id="containerAdvantages">
-          <ul>
-            <li>
-              <p>Suivi de sa progression</p>
-            </li>
-            <li>
-              <p>Exercices et QCM pour la mise en pratique</p>
-            </li>
-            <li>
-              <p>Possibilité de télécharger/imprimer les formations</p>
-            </li>
-            <li>
-              <p>Contenu qualitatif et vérifié</p>
-            </li>
-            <li>
-              <p>Suivi en autonomie, 24h/24, 7j/7</p>
-            </li>
-            <li>
-              <p>
-                Espaces d’échanges dédiés pour poser ses questions sur les
-                formations
-              </p>
-            </li>
-          </ul>
+        <div id="containerAllAdvantages">
+          <div id="containerAdvantages">
+            <ul>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                >
+                  <path
+                    d="M10.5725 8.85088L21.225 8.85073M21.225 8.85073L21.225 19.3517M21.225 8.85073L8.85065 21.2251"
+                    stroke="#44DD8A"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p>Suivi de sa progression</p>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                >
+                  <path
+                    d="M5 19.0055L5 23.6156C5 24.3143 5.26339 24.9844 5.73223 25.4784C6.20107 25.9725 6.83696 26.25 7.5 26.25H22.5C23.163 26.25 23.7989 25.9725 24.2678 25.4784C24.7366 24.9844 25 24.3143 25 23.6156V19.0055M15.0014 3.75V18.6781M15.0014 18.6781L20.7157 12.9741M15.0014 18.6781L9.28711 12.9741"
+                    stroke="#44DD8A"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <p>Exercices et QCM pour la mise en pratique</p>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                >
+                  <path
+                    d="M24.3808 15C24.3808 21.2132 19.3427 26.25 13.1279 26.25C6.9131 26.25 1.875 21.2132 1.875 15C1.875 8.7868 6.9131 3.75 13.1279 3.75C17.2931 3.75 20.9297 6.01237 22.8754 9.375M21.2939 16.2346L24.1071 13.4221L26.9203 16.2346M17.3438 18.0677L13.125 16.6614V10.7812"
+                    stroke="#44DD8A"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p>Possibilité de télécharger/imprimer les formations</p>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                >
+                  <path
+                    d="M9.375 12.2932V12.1875M15 12.2932V12.1875M20.625 12.2932V12.1875M18.0571 20.3804L15 26.25L12.1875 20.3804H6.5625C5.0092 20.3804 3.75 19.1212 3.75 17.5679V6.5625C3.75 5.0092 5.0092 3.75 6.5625 3.75H23.4375C24.9908 3.75 26.25 5.0092 26.25 6.5625V17.5679C26.25 19.1212 24.9908 20.3804 23.4375 20.3804H18.0571Z"
+                    stroke="#44DD8A"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p>Contenu qualitatif et vérifié</p>
+              </li>
+              <li>
+                <p>Suivi en autonomie, 24h/24, 7j/7</p>
+              </li>
+              <li>
+                <p>
+                  Espaces d’échanges dédiés pour poser ses questions sur les
+                  formations
+                </p>
+              </li>
+            </ul>
+          </div>
+          <img src="img/avantages.png" alt="Image pour les avantages" />
         </div>
-        <img src="img/avantages.png" alt="Image pour les avantages" />
       </article>
 
       <!-- creez vos formations avec klivio -->
