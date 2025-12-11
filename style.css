@@ -154,6 +154,7 @@ header {
   flex-flow: column;
   align-items: center;
   width: 100%;
+  background-color: white;
 
   h2 {
     font-size: 32px;
@@ -628,7 +629,7 @@ header {
     flex-direction: column;
     width: 50%;
     justify-content: center;
-    padding: 80px 100px;
+    padding: 80px 100px 80px calc((100vw - 1504px) / 2);
 
     h2 {
       font-family: "Montserrat", sans-serif;
