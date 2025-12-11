@@ -281,7 +281,7 @@ header {
     max-width: 1504px;
   }
 
-  button{
+  button {
     margin-top: 40px;
     margin-bottom: 40px;
     width: 225px;
@@ -366,15 +366,14 @@ header {
   }
 }
 
-
-#reviews{
+#reviews {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   padding: 80px 0;
 
-  h2{
+  h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
     font-style: normal;
@@ -388,27 +387,27 @@ header {
     margin-top: 0;
   }
 
-  #containerReviews{
+  #containerReviews {
     display: flex;
     gap: 92px;
     max-width: 1504px;
     width: auto;
   }
 
-  .cardReview{
+  .cardReview {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 706px;
 
-    img{
+    img {
       width: 139px;
       height: 139px;
       border-radius: 50%;
       margin-bottom: 16px;
     }
 
-    h3{
+    h3 {
       font-size: 24px;
       font-weight: 700;
       color: var(--principal-color);
@@ -433,7 +432,7 @@ header {
       opacity: 1;
     }
 
-    p{
+    p {
       font-size: 16px;
       line-height: 1.7;
       margin-top: 0;
@@ -444,7 +443,7 @@ header {
   }
 }
 
-#advantage{
+#advantage {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -452,7 +451,7 @@ header {
   padding: 80px 0;
   background-color: #f5f5f5;
 
-  h2{
+  h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: 1000;
     font-style: normal;
@@ -466,7 +465,7 @@ header {
     width: 100%;
   }
 
-  #containerAllAdvantages{
+  #containerAllAdvantages {
     display: flex;
     flex-direction: row;
     gap: 80px;
@@ -475,12 +474,12 @@ header {
     align-items: center;
   }
 
-  #containerAdvantages{
+  #containerAdvantages {
     flex: 1;
     display: flex;
     flex-direction: column;
 
-    ul{
+    ul {
       list-style: none;
       padding: 0;
       margin: 0;
@@ -489,18 +488,18 @@ header {
       gap: 20px;
     }
 
-    li{
+    li {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
       gap: 16px;
 
-      svg{
+      svg {
         min-width: 30px;
         margin-top: 4px;
       }
 
-      p{
+      p {
         font-family: "Montserrat", sans-serif;
         font-size: 24px;
         line-height: 1.6;
@@ -510,24 +509,23 @@ header {
     }
   }
 
-  img{
+  img {
     width: 50%;
     max-width: 727px;
     height: auto;
     object-fit: cover;
-
   }
 }
 
-#crateForm{
+#crateForm {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   padding: 80px 0;
-  background-color: #44DD8A;
+  background-color: #44dd8a;
 
-  h2{
+  h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
     font-style: normal;
@@ -543,7 +541,7 @@ header {
     width: 100%;
   }
 
-  #containerAllCreate{
+  #containerAllCreate {
     display: flex;
     flex-direction: row;
     gap: 80px;
@@ -552,12 +550,12 @@ header {
     align-items: center;
   }
 
-  #containerCreate{
+  #containerCreate {
     flex: 1;
     display: flex;
     flex-direction: column;
 
-    ul{
+    ul {
       list-style: none;
       padding: 0;
       margin: 0;
@@ -566,18 +564,18 @@ header {
       gap: 20px;
     }
 
-    li{
+    li {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
       gap: 16px;
 
-      svg{
+      svg {
         min-width: 30px;
         margin-top: 4px;
       }
 
-      p{
+      p {
         font-family: "Montserrat", sans-serif;
         font-size: 24px;
         line-height: 1.6;
@@ -587,7 +585,7 @@ header {
     }
   }
 
-  img{
+  img {
     width: 50%;
     height: 487px;
     max-width: 727px;
@@ -596,4 +594,61 @@ header {
   }
 }
 
-#aboutKlivio
+#aboutKlivio {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  background-color: #f5f5f5;
+
+  #containerAllAbout {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    gap: 0;
+  }
+
+  #imgDiv {
+    width: 50%;
+    height: 740px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--principal-color);
+  }
+
+  img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  #containerAdvantages {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    padding: 80px 100px;
+
+    h2 {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 1000;
+      font-style: normal;
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: -0.015em;
+      text-transform: uppercase;
+      color: var(--principal-color);
+      margin-bottom: 30px;
+      margin-top: 0;
+    }
+
+    p {
+      font-family: "Montserrat", sans-serif;
+      font-size: 18px;
+      line-height: 28px;
+      color: #4a4a4a;
+      margin-bottom: 20px;
+    }
+  }
+}
