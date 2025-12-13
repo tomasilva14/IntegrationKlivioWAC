@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Klivio - Les meilleures formations sur le développement personnel. Progressez avec nos formations en prise de parole, gestion du stress, travail en équipe et plus encore." />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -12,16 +13,30 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Klivio</title>
+    <title>Klivio - Formations en Développement Personnel</title>
   </head>
   <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link" style="position: absolute; left: -9999px; z-index: 999;">Aller au contenu principal</a>
+    
     <!-- header -->
     <header>
       <nav id="navBar">
         <img src="img/logo.png" alt="Logo Klivio" />
-        <a href="#">Les formations</a>
+        
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        
+        <div class="nav-links">
+          <a href="#">Les formations</a>
+        </div>
+        
         <div id="searchBar">
-          <input type="search" placeholder="Recherche" />
+          <label for="search-input" class="sr-only" style="position: absolute; left: -9999px;">Rechercher une formation</label>
+          <input id="search-input" type="search" placeholder="Recherche" />
           <i class="fa fa-search"></i>
         </div>
 
@@ -32,7 +47,7 @@
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <!-- Hero Section -->
       <section id="heroSection">
         <h1>KLIVIO, L'ALLIÉ DE VOTRE PROGRESSION</h1>
@@ -213,7 +228,7 @@
         <h2>Avis Clients</h2>
         <div id="containerReviews">
           <article class="cardReview">
-            <img src="img/juliette.png" alt="Profil Pic juliette" />
+            <img src="img/juliette.png" alt="Photo de profil de Juliette" />
             <h3>Juliette</h3>
             <div class="rating">
               <span class="fa fa-star checked"></span>
@@ -231,7 +246,7 @@
             </p>
           </article>
           <article class="cardReview">
-            <img src="img/camille.png" alt="Profil Pic Camille" />
+            <img src="img/camille.png" alt="Photo de profil de Camille" />
             <h3>Camille</h3>
             <div class="rating">
               <span class="fa fa-star checked"></span>
@@ -375,7 +390,7 @@
       <!-- creez vos formations avec klivio -->
       <article id="crateForm">
         <div id="containerAllCreate">
-          <img src="img/become-author.png" alt="Image creez votre formations" />
+          <img src="img/become-author.png" alt="Devenez auteur de formations sur Klivio" />
           <div id="containerCreate">
             <ul>
               <h2>Créez vos formations avec Klivio</h2>
@@ -508,10 +523,13 @@
         <div id="underline"></div>
         <form>
           <div class="formRow">
-            <input type="text" placeholder="Nom" />
-            <input type="email" placeholder="Email" />
+            <label for="name" class="sr-only" style="position: absolute; left: -9999px;">Votre nom</label>
+            <input id="name" type="text" placeholder="Nom" required />
+            <label for="email" class="sr-only" style="position: absolute; left: -9999px;">Votre email</label>
+            <input id="email" type="email" placeholder="Email" required />
           </div>
-          <textarea placeholder="Votre message"></textarea>
+          <label for="message" class="sr-only" style="position: absolute; left: -9999px;">Votre message</label>
+          <textarea id="message" placeholder="Votre message" required></textarea>
           <button type="submit">Envoyer</button>
         </form>
       </section>
@@ -521,7 +539,7 @@
     <footer>
       <div id="footerLine"></div>
       <nav>
-        <img src="img/logo.png" alt="logo footer" />
+        <img src="img/logo.png" alt="Logo Klivio" />
         <div>
           <h4>Mentions légales</h4>
           <ul>
@@ -535,23 +553,26 @@
           <h4>Coordonnées</h4>
           <ul>
             <li>
-              <a href="#">1 place république,<br />75003 Paris</a>
+              <a href="#"><i class="fa fa-map-marker"></i> 1 place république, 75003 Paris</a>
             </li>
-            <li><a href="#">01.02.03.04.05</a></li>
-            <li><a href="#">contact@klivio.fr</a></li>
+            <li><a href="#"><i class="fa fa-phone"></i> 01.02.03.04.05</a></li>
+            <li><a href="#"><i class="fa fa-envelope"></i> contact@klivio.fr</a></li>
           </ul>
         </div>
-        <button id="btnFooterConn">Connexion</button>
-        <button id="btnFooterInsc">Inscription</button>
+        <div class="footer-buttons">
+          <button id="btnFooterConn">Connexion</button>
+          <button id="btnFooterInsc">Inscription</button>
+        </div>
       </nav>
+      <div class="footerDivider"></div>
       <div>
         <p>© Klivio - 2025</p>
         <ul>
-          <li><a href="#">Suivez - nous</a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
+          <li><a href="#" class="suivezNous">Suivez - nous</a></li>
+          <li><a href="#"><i class="fa fa-facebook" class="logo"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter" class="logo"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram" class="logo"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin" class="logo"></i></a></li>
         </ul>
       </div>
     </footer>
