@@ -1,134 +1,107 @@
+/* Google Fonts: Import Montserrat font with all weights (100-900) */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* CSS Custom Properties (Variables): Define reusable values for colors, spacing, and typography */
 :root {
-  --principal-color: #152237;
-  --secondary-color: #44dd8a;
-  --tertiary-color: #15b7e2;
-  --gradient: linear-gradient(90deg, #44dd8a 0%, #15b7e2 100%);
-  --text-color: #4a4a4a;
-  --border-radius: 6px;
+  /* Brand colors: Main color palette for the site */
+  --principal-color: #152237; /* Dark blue - primary brand color */
+  --secondary-color: #44dd8a; /* Green - accent and CTA color */
+  --tertiary-color: #15b7e2; /* Light blue - secondary accent */
+  --gradient: linear-gradient(90deg, #44dd8a 0%, #15b7e2 100%); /* Green to blue gradient */
+  --text-color: #4a4a4a; /* Gray - body text color */
+  --border-radius: 6px; /* Standard border radius for buttons and inputs */
 
   /* Fluid spacing using clamp() - scales between mobile (394px) and desktop */
-  --spacing-xs: clamp(0.5rem, 1vw, 0.625rem);
-  --spacing-sm: clamp(0.75rem, 2vw, 1.25rem);
-  --spacing-md: clamp(1.25rem, 3vw, 2.5rem);
-  --spacing-lg: clamp(2rem, 4vw, 3.75rem);
-  --spacing-xl: clamp(2.5rem, 5vw, 5rem);
+  --spacing-xs: clamp(0.5rem, 1vw, 0.625rem); /* Extra small spacing */
+  --spacing-sm: clamp(0.75rem, 2vw, 1.25rem); /* Small spacing */
+  --spacing-md: clamp(1.25rem, 3vw, 2.5rem); /* Medium spacing */
+  --spacing-lg: clamp(2rem, 4vw, 3.75rem); /* Large spacing */
+  --spacing-xl: clamp(2.5rem, 5vw, 5rem); /* Extra large spacing */
 
-  /* Container max-width */
-  --container-max-width: 1504px;
-  --container-padding: clamp(1rem, 3vw, 1.25rem);
+  /* Container max-width: Maximum width for content sections */
+  --container-max-width: 1504px; /* Max width for main content */
+  --container-padding: clamp(1rem, 3vw, 1.25rem); /* Side padding for containers */
 
-  /* Fluid font sizes using clamp() */
-  --font-size-xs: clamp(13px, 1.5vw, 15px);
-  --font-size-sm: clamp(15px, 2vw, 18px);
-  --font-size-md: clamp(17px, 2.5vw, 20px);
-  --font-size-lg: clamp(20px, 3vw, 24px);
-  --font-size-xl: clamp(26px, 4vw, 36px);
-  --font-size-2xl: clamp(32px, 5vw, 44px);
-  --font-size-3xl: clamp(36px, 6vw, 52px);
+  /* Fluid font sizes using clamp(): Responsive typography that scales smoothly */
+  --font-size-xs: clamp(13px, 1.5vw, 15px); /* Extra small text */
+  --font-size-sm: clamp(15px, 2vw, 18px); /* Small text */
+  --font-size-md: clamp(17px, 2.5vw, 20px); /* Medium text */
+  --font-size-lg: clamp(20px, 3vw, 24px); /* Large text */
+  --font-size-xl: clamp(26px, 4vw, 36px); /* Extra large text */
+  --font-size-2xl: clamp(32px, 5vw, 44px); /* 2X large text */
+  --font-size-3xl: clamp(36px, 6vw, 52px); /* 3X large text */
 
-  /* Grid gaps */
-  --gap-cards: clamp(1.25rem, 4vw, 5.75rem);
-  --gap-section: clamp(1.5rem, 5vw, 5rem);
+  /* Grid gaps: Spacing between grid items */
+  --gap-cards: clamp(1.25rem, 4vw, 5.75rem); /* Gap between course cards */
+  --gap-section: clamp(1.5rem, 5vw, 5rem); /* Gap between sections */
 }
 
+/* Universal selector: Reset default margins and padding, set box-sizing */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif, arial;
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  font-family: "Montserrat", sans-serif, arial; /* Set default font family */
 }
 
+/* HTML element: Base configuration */
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+}
+
+/* Body element: Base text styling */
 body {
-  letter-spacing: -0.015em;
+  letter-spacing: -0.015em; /* Slightly tighten letter spacing for modern look */
 }
 
+/* Lists: Remove default styling from ul and ol elements */
 ul,
 ol {
-  list-style: none;
+  list-style: none; /* Remove bullet points and numbering */
 }
 
+/* Links: Base styling for all anchor elements */
 a {
-  color: inherit;
-  text-decoration: none;
+  color: inherit; /* Inherit color from parent element */
+  text-decoration: none; /* Remove underline */
 }
 
-a:hover {
-  text-decoration: none;
-}
-
+/* Buttons: Base styling for all button elements */
 button {
-  cursor: pointer;
-  font-family: inherit;
+  font-family: inherit; /* Inherit font from parent */
 }
 
-/* Focus styles for accessibility */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus {
-  outline: 2px solid var(--secondary-color);
-  outline-offset: 2px;
-}
-
-/* Skip to main content link */
-.skip-link:focus {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  background: var(--secondary-color);
-  color: var(--principal-color);
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: var(--border-radius);
-  font-weight: 700;
-  z-index: 9999;
-}
-
-/* Screen reader only text */
+/* Accessibility: Screen reader only text (hidden visually but readable by screen readers) */
 .sr-only {
   position: absolute;
-  left: -9999px;
+  left: -9999px; /* Move far off-screen */
   width: 1px;
   height: 1px;
   overflow: hidden;
 }
 
-/* Hamburger menu styles */
+/* Hamburger menu: Mobile navigation toggle button (3 horizontal lines) */
 .hamburger {
-  display: none;
+  display: none; /* Hidden on desktop, shown on mobile via media query */
   flex-direction: column;
-  gap: 4px;
+  gap: 4px; /* Space between the 3 lines */
   background: transparent;
   border: none;
-  cursor: pointer;
   padding: 8px;
-  z-index: 1001;
+  z-index: 1001; /* Appear above other content */
 }
 
+/* Hamburger lines: The 3 horizontal bars */
 .hamburger span {
   width: 25px;
   height: 3px;
   background: white;
-  transition: all 0.3s ease;
   border-radius: 2px;
 }
 
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(7px, 7px);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
-
+/* Header: Main navigation bar at top of page */
 header {
-  background-color: var(--principal-color);
+  background-color: var(--principal-color); /* Dark blue background */
   min-height: 80px;
   width: 100%;
   display: flex;
@@ -136,21 +109,24 @@ header {
   justify-content: center;
   position: relative;
 
+  /* Navigation container: Flexbox layout for nav items */
   nav {
     display: flex;
-    width: calc(100% - 2 * var(--container-padding));
+    width: calc(100% - 2 * var(--container-padding)); /* Full width minus padding */
     max-width: var(--container-max-width);
     align-items: center;
     gap: var(--spacing-md);
     padding: var(--spacing-sm) var(--container-padding);
     position: relative;
 
+    /* Logo image */
     img {
-      height: clamp(25px, 4vw, 31px);
-      width: auto;
-      flex-shrink: 0;
+      height: clamp(25px, 4vw, 31px); /* Responsive height */
+      width: auto; /* Maintain aspect ratio */
+      flex-shrink: 0; /* Prevent shrinking */
     }
 
+    /* Navigation links container */
     .nav-links {
       display: flex;
       gap: var(--spacing-md);
@@ -158,88 +134,85 @@ header {
       margin-left: var(--spacing-xl);
     }
 
+    /* Navigation link styling */
     a {
       color: white;
-      transition: opacity 0.2s ease;
       font-size: var(--font-size-sm);
-      white-space: nowrap;
+      white-space: nowrap; /* Prevent text wrapping */
     }
 
-    a:hover {
-      opacity: 0.8;
-    }
-
+    /* Search bar: Centered search input with icon */
     #searchBar {
       display: flex;
       align-items: center;
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 50%; /* Center horizontally */
+      transform: translateX(-50%); /* Perfect centering */
       width: 100%;
       max-width: 477px;
 
+      /* Search icon positioning */
       i {
         position: absolute;
-        right: 15px;
+        right: 15px; /* Inside input on the right */
         color: white;
-        pointer-events: none;
       }
     }
 
+    /* Search input field */
     input {
       width: 100%;
       height: clamp(36px, 5vw, 40px);
       border: solid white 1px;
-      background-color: var(--principal-color);
+      background-color: var(--principal-color); /* Same as header background */
       border-radius: var(--border-radius);
-      padding-right: 40px;
+      padding-right: 40px; /* Space for icon */
       padding-left: var(--spacing-sm);
       box-sizing: border-box;
       font-size: var(--font-size-sm);
     }
 
+    /* Placeholder text styling */
     ::placeholder {
       color: white;
       padding-left: 0;
     }
 
+    /* Navigation buttons container */
     #navBarBtn {
       display: flex;
       gap: var(--spacing-sm);
       flex-wrap: nowrap;
-      margin-left: auto;
+      margin-left: auto; /* Push to right side */
     }
 
+    /* Button base styling */
     button {
-      width: clamp(110px, 15vw, 130px);
+      width: clamp(110px, 15vw, 130px); /* Responsive width */
       min-width: 110px;
       height: clamp(36px, 5vw, 40px);
       border-radius: var(--border-radius);
       border: none;
       font-size: clamp(13px, 2vw, 15px);
-      cursor: pointer;
-      transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
-    button:hover {
-      transform: translateY(-1px);
-      opacity: 0.9;
-    }
-
+    /* Sign in button: White background */
     #signInBtn {
       background: white;
       color: var(--principal-color);
       border: none;
     }
 
+    /* Sign up button: Gradient background */
     #signUpBtn {
-      background: var(--gradient);
+      background: var(--gradient); /* Green to blue gradient */
       border: none;
       color: var(--principal-color);
     }
   }
 }
 
+/* Hero section: Large banner with background image, gradient overlay, and call-to-action */
 #heroSection {
   min-height: 450px;
   width: 100%;
@@ -248,25 +221,28 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
-  background-image: url("img/bg-header.png");
-  background-size: cover;
+  background-image: url("img/bg-header.png"); /* Background image */
+  background-size: cover; /* Cover entire section */
   background-position: center;
   padding: var(--spacing-md) var(--container-padding);
 
+  /* Main headline */
   h1 {
     color: var(--principal-color);
-    font-size: clamp(28px, 5vw, 48px);
-    font-weight: 900;
+    font-size: clamp(28px, 5vw, 48px); /* Responsive font size */
+    font-weight: 900; /* Extra bold */
     margin-bottom: 25px;
     text-align: center;
   }
 
+  /* Tagline text */
   p {
     color: black;
     font-size: clamp(18px, 3vw, 22px);
     text-align: center;
   }
 
+  /* Call-to-action button */
   button {
     margin-top: 27px;
     width: 130px;
@@ -277,16 +253,10 @@ header {
     color: var(--principal-color);
     font-size: 15px;
     font-weight: 700;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 }
 
+/* Hero section gradient overlay: Semi-transparent gradient over background image */
 #heroSection::before {
   content: "";
   position: absolute;
@@ -294,14 +264,15 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--gradient);
-  opacity: 0.8;
-  z-index: 0;
+  background: var(--gradient); /* Green to blue gradient */
+  opacity: 0.8; /* 80% opacity */
+  z-index: 0; /* Behind content */
 }
 
+/* Hero section content: Ensure text appears above gradient overlay */
 #heroSection > * {
   position: relative;
-  z-index: 1;
+  z-index: 1; /* Above gradient overlay */
 }
 
 #popFormations {
@@ -342,12 +313,6 @@ header {
     color: white;
     font-size: 15px;
     font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-
-  button:hover {
-    background-color: #1a2d4a;
   }
 
   .card {
@@ -464,12 +429,6 @@ header {
     color: var(--principal-color);
     font-size: 15px;
     font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-
-  button:hover {
-    background-color: #f0f0f0;
   }
 
   .card {
@@ -792,30 +751,32 @@ header {
 
 #aboutKlivio {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   background-color: #f5f5f5;
+  height: 740px;
+  padding-left: 10%;
 
   #containerAllAbout {
     display: flex;
     flex-direction: row;
     align-items: stretch;
     width: 100%;
-    max-width: var(--container-max-width);
+    max-width: 100%;
     gap: 0;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   #imgDiv {
-    width: 100%;
-    max-width: 50%;
-    min-width: 400px;
+    width: 50vw;
+    max-width: 50vw;
+    min-width: 50vw;
     min-height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--principal-color);
-    flex: 1 1 400px;
+    flex: 0 0 50vw;
   }
 
   img {
@@ -829,10 +790,9 @@ header {
   #containerAdvantages {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 50%;
     max-width: 50%;
-    min-width: 400px;
-    flex: 1 1 400px;
+    flex: 1 1 50%;
     justify-content: center;
     padding: var(--spacing-xl) clamp(20px, 5vw, 100px);
 
@@ -942,16 +902,9 @@ header {
       font-family: "Montserrat", sans-serif;
       font-size: 16px;
       font-weight: 600;
-      cursor: pointer;
       border-radius: var(--border-radius);
       width: 100%;
       max-width: 351px;
-      transition: background-color 0.2s ease, transform 0.2s ease;
-    }
-
-    button:hover {
-      background-color: #3bc97a;
-      transform: translateY(-1px);
     }
   }
 }
@@ -1039,7 +992,6 @@ footer {
       border-radius: var(--border-radius);
       border: none;
       font-size: 15px;
-      cursor: pointer;
       font-weight: 600;
     }
 
@@ -1164,7 +1116,6 @@ footer {
         background: transparent;
         border: none;
         padding: 8px;
-        cursor: pointer;
       }
 
       img {
@@ -1373,26 +1324,31 @@ footer {
   }
 
   #aboutKlivio {
+    height: auto;
+    padding-left: 0;
+
     #containerAllAbout {
       flex-direction: column;
+      max-width: 100%;
+      flex-wrap: wrap;
     }
 
     #containerAdvantages {
       display: flex;
       flex-direction: column;
-      width: 100%;
-      max-width: 100%;
+      width: 100% !important;
+      max-width: 100% !important;
       min-width: 0;
-      flex: 1 1 auto;
+      flex: 1 1 auto !important;
       padding: var(--spacing-xl);
     }
 
     #imgDiv {
-      width: 100%;
-      max-width: 100%;
-      min-width: 0;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
       min-height: 400px;
-      flex: 1 1 auto;
+      flex: 1 1 auto !important;
       padding: var(--spacing-md);
       background-color: var(--principal-color);
 

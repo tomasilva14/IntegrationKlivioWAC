@@ -1,45 +1,83 @@
 <!DOCTYPE html>
+<!-- Main HTML document for Klivio e-learning platform -->
 <html lang="fr">
   <head>
+    <!-- Character encoding: UTF-8 for international character support -->
     <meta charset="UTF-8" />
+    
+    <!-- Viewport: Responsive design configuration for mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO: Meta description for search engine results (155 characters max) -->
     <meta name="description" content="Klivio - Les meilleures formations sur le développement personnel. Progressez avec nos formations en prise de parole, gestion du stress, travail en équipe et plus encore." />
+    
+    <!-- SEO: Keywords for search engine indexing -->
+    <meta name="keywords" content="formation, développement personnel, e-learning, cours en ligne, prise de parole, gestion stress, leadership, coaching, klivio" />
+    
+    <!-- SEO: Author and robots meta tags -->
+    <meta name="author" content="Klivio" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph: Meta tags for social media sharing (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Klivio - Formations en Développement Personnel" />
+    <meta property="og:description" content="Les meilleures formations sur le développement personnel. Progressez avec nos formations en prise de parole, gestion du stress, travail en équipe." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="img/logo.png" />
+    <meta property="og:locale" content="fr_FR" />
+    
+    <!-- Performance: DNS prefetch to resolve domain names early -->
+    <link rel="dns-prefetch" href="https://maxcdn.bootstrapcdn.com" />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    
+    <!-- External CSS: Bootstrap 3.3.7 framework for grid and components -->
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
+    
+    <!-- External CSS: Font Awesome 4.7.0 icon library -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    
+    <!-- Custom CSS: Main stylesheet with responsive design -->
     <link rel="stylesheet" href="style.css" />
+    
+    <!-- Page title: Displayed in browser tab and search results -->
     <title>Klivio - Formations en Développement Personnel</title>
   </head>
   <body>
-    <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="skip-link" style="position: absolute; left: -9999px; z-index: 999;">Aller au contenu principal</a>
+    <!-- Accessibility: Skip link allows keyboard users to jump to main content -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
     
-    <!-- header -->
+    <!-- Header: Main navigation bar (fixed at top, contains logo, menu, search, buttons) -->
     <header>
       <nav id="navBar">
-        <img src="img/logo.png" alt="Logo Klivio" />
+        <!-- Logo: Brand image with alt text for accessibility and SEO -->
+        <img src="img/logo.png" alt="Logo Klivio" width="168" height="62" />
         
+        <!-- Hamburger menu: Mobile navigation toggle (3 horizontal lines) -->
         <div class="hamburger">
           <span></span>
           <span></span>
           <span></span>
         </div>
         
+        <!-- Navigation links: Main menu items (hidden on mobile) -->
         <div class="nav-links">
           <a href="#">Les formations</a>
         </div>
         
+        <!-- Search bar: Course search input with icon (centered on desktop) -->
         <div id="searchBar">
-          <label for="search-input" class="sr-only" style="position: absolute; left: -9999px;">Rechercher une formation</label>
-          <input id="search-input" type="search" placeholder="Recherche" />
+          <label for="search-input" class="sr-only">Rechercher une formation</label>
+          <input id="search-input" type="search" placeholder="Recherche" autocomplete="off" />
           <i class="fa fa-search"></i>
         </div>
 
+        <!-- Authentication buttons: Sign in and sign up (hidden on mobile) -->
         <div id="navBarBtn">
           <button id="signInBtn">Connexion</button>
           <button id="signUpBtn">Inscription</button>
@@ -47,20 +85,25 @@
       </nav>
     </header>
 
+    <!-- Main content: Contains all page sections -->
     <main id="main-content">
-      <!-- Hero Section -->
+      <!-- Hero section: Large banner with headline, tagline, and call-to-action -->
       <section id="heroSection">
         <h1>KLIVIO, L'ALLIÉ DE VOTRE PROGRESSION</h1>
         <p>LES MEILLEURES FORMATIONS SUR LE DÉVELOPPEMENT PERSONNEL</p>
+        <!-- CTA button: Primary action for users -->
         <button id="nowMoreBtn">En savoir plus</button>
       </section>
 
-      <!-- Les formation populaires -->
+      <!-- Popular courses section: Grid of featured courses with cards -->
       <section id="popFormations">
         <h2>Les formations populaires</h2>
+        <!-- Container: Flexbox grid for course cards -->
         <div id="container">
+          <!-- Course card: Individual course with image, price, rating, and description -->
           <article class="card">
-            <img src="img/img-course.png" alt="Image de la formation" />
+            <!-- Course image: Visual with lazy loading for performance -->
+            <img src="img/img-course.png" alt="Image de la formation" loading="lazy" />
             <div class="formationInfo">
               <div class="prixFormPop">
                 <p class="valueAfter">15,99 €</p>
@@ -79,8 +122,9 @@
             </div>
           </article>
           <article class="card">
-            <img src="img/img-course.png" alt="Image de la formation" />
+            <img src="img/img-course.png" alt="Image de la formation" loading="lazy" />
             <div class="formationInfo">
+              <!-- Price badge: Shows current price and crossed-out original price -->
               <div class="prixFormPop">
                 <p class="valueAfter">15,99 €</p>
                 <p class="valueBefore">60 €</p>
@@ -98,7 +142,7 @@
             </div>
           </article>
           <article class="card">
-            <img src="img/img-course.png" alt="Image de la formation" />
+            <img src="img/img-course.png" alt="Image de la formation" loading="lazy" />
             <div class="formationInfo">
               <div class="prixFormPop">
                 <p class="valueAfter">15,99 €</p>
@@ -117,7 +161,7 @@
             </div>
           </article>
           <article class="card">
-            <img src="img/img-course.png" alt="Image de la formation" />
+            <img src="img/img-course.png" alt="Image de la formation" loading="lazy" />
             <div class="formationInfo">
               <div class="prixFormPop">
                 <p class="valueAfter">15,99 €</p>
@@ -136,15 +180,16 @@
             </div>
           </article>
         </div>
+        <!-- Button: Load more courses action -->
         <button id="seeMoreFomrs">Voir plus de formations</button>
       </section>
 
-      <!-- Les formations récentes -->
+      <!-- Recent courses section: Grid of newly added courses -->
       <section id="formationsRecentes">
         <h2>Les formations récentes</h2>
         <div id="container">
           <article class="card">
-            <img src="img/img-course.png" alt="Image de la formation" />
+            <img src="img/img-course.png" alt="Image de la formation" loading="lazy" />
             <div class="formationInfo">
               <div class="prixFormPop">
                 <p class="valueAfter">15,99 €</p>
@@ -163,7 +208,7 @@
             </div>
           </article>
           <article class="card">
-            <img src="img/img-course.png" alt="Image de la formation" />
+            <img src="img/img-course.png" alt="Image de la formation" loading="lazy" />
             <div class="formationInfo">
               <div class="prixFormPop">
                 <p class="valueAfter">15,99 €</p>
@@ -182,7 +227,7 @@
             </div>
           </article>
           <article class="card">
-            <img src="img/img-course.png" alt="Image de la formation" />
+            <img src="img/img-course.png" alt="Image de la formation" loading="lazy" />
             <div class="formationInfo">
               <div class="prixFormPop">
                 <p class="valueAfter">15,99 €</p>
@@ -201,7 +246,7 @@
             </div>
           </article>
           <article class="card">
-            <img src="img/img-course.png" alt="Image de la formation" />
+            <img src="img/img-course.png" alt="Image de la formation" loading="lazy" />
             <div class="formationInfo">
               <div class="prixFormPop">
                 <p class="valueAfter">15,99 €</p>
@@ -223,12 +268,13 @@
         <button id="seeMoreFomrs">Voir plus de formations</button>
       </section>
 
-      <!-- Avis Clients -->
+      <!-- Customer reviews section: Testimonials with photos, names, ratings, and feedback -->
       <section id="reviews">
         <h2>Avis Clients</h2>
         <div id="containerReviews">
+          <!-- Review card: Individual testimonial -->
           <article class="cardReview">
-            <img src="img/juliette.png" alt="Photo de profil de Juliette" />
+            <img src="img/juliette.png" alt="Photo de profil de Juliette" loading="lazy" />
             <h3>Juliette</h3>
             <div class="rating">
               <span class="fa fa-star checked"></span>
@@ -246,7 +292,7 @@
             </p>
           </article>
           <article class="cardReview">
-            <img src="img/camille.png" alt="Photo de profil de Camille" />
+            <img src="img/camille.png" alt="Photo de profil de Camille" loading="lazy" />
             <h3>Camille</h3>
             <div class="rating">
               <span class="fa fa-star checked"></span>
@@ -264,11 +310,12 @@
         </div>
       </section>
 
-      <!-- Les avantages klivio -->
+      <!-- Platform advantages section: List of benefits with SVG icons -->
       <article id="advantage">
         <div id="containerAllAdvantages">
           <div id="containerAdvantages">
             <h2>Les avantages klivio</h2>
+            <!-- Benefits list: Each item has icon and description -->
             <ul>
               <li>
                 <svg
@@ -383,15 +430,18 @@
               </li>
             </ul>
           </div>
-          <img src="img/avantages.png" alt="Image pour les avantages" />
+          <!-- Illustrative image: Visual representation of platform benefits -->
+          <img src="img/avantages.png" alt="Image pour les avantages" loading="lazy" />
         </div>
       </article>
 
-      <!-- creez vos formations avec klivio -->
+      <!-- Create courses section: Information for instructors who want to create content -->
       <article id="crateForm">
         <div id="containerAllCreate">
+          <!-- Mobile title: Visible only on small screens -->
           <h2 id="mobileTitle">Créez vos formationS</h2>
-          <img src="img/become-author.png" alt="Devenez auteur de formations sur Klivio" />
+          <!-- Instructor call-to-action image -->
+          <img src="img/become-author.png" alt="Devenez auteur de formations sur Klivio" loading="lazy" />
           <div id="containerCreate">
             <ul>
               <h2>Créez vos formations avec Klivio</h2>
@@ -482,9 +532,10 @@
         </div>
       </article>
 
-      <!-- A propos de klivio -->
+      <!-- About section: Company values and mission statement -->
       <article id="aboutKlivio">
         <div id="containerAllAbout">
+          <!-- Text content: Company description -->
           <div id="containerAdvantages">
             <h2>À propos de Klivio</h2>
             <p>
@@ -500,35 +551,45 @@
               des pportunités d'apprentissage de qualité
             </p>
           </div>
+          <!-- Logo container: Large display area with dark background -->
           <div id="imgDiv">
-            <img src="img/logo.png" alt="Logo pour a propos de l'organization" />
+            <img src="img/logo.png" alt="Logo pour a propos de l'organization" loading="lazy" />
           </div>
         </div>
       </article>
 
-      <!-- Nous Contacter -->
+      <!-- Contact form section: Allows visitors to send messages -->
       <section id="contactUs">
         <h2>Nous Contacter</h2>
+        <!-- Decorative underline: Visual separator -->
         <div id="underline"></div>
+        <!-- Contact form: Name, email, and message inputs -->
         <form>
+          <!-- Form row: Horizontal layout for name and email on desktop -->
           <div class="formRow">
-            <label for="name" class="sr-only" style="position: absolute; left: -9999px;">Votre nom</label>
+            <label for="name" class="sr-only">Votre nom</label>
             <input id="name" type="text" placeholder="Nom" required />
-            <label for="email" class="sr-only" style="position: absolute; left: -9999px;">Votre email</label>
+            <label for="email" class="sr-only">Votre email</label>
             <input id="email" type="email" placeholder="Email" required />
           </div>
-          <label for="message" class="sr-only" style="position: absolute; left: -9999px;">Votre message</label>
+          <label for="message" class="sr-only">Votre message</label>
+          <!-- Message textarea: Multi-line text input -->
           <textarea id="message" placeholder="Votre message" required></textarea>
+          <!-- Submit button: Sends form data -->
           <button type="submit">Envoyer</button>
         </form>
       </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer: Site-wide footer with links, contact info, and social media -->
     <footer>
+      <!-- Decorative line: Gradient bar at top of footer -->
       <span id="footerLine"></span>
+      <!-- Footer navigation: Multiple columns with information -->
       <nav>
+        <!-- Footer logo -->
         <img src="img/logo.png" alt="Logo Klivio" />
+        <!-- Legal links column -->
         <div>
           <h4>Mentions légales</h4>
           <ul>
@@ -538,8 +599,10 @@
             <li><a href="#">Contact</a></li>
           </ul>
         </div>
+        <!-- Contact information column -->
         <div>
           <h4>Coordonnées</h4>
+          <!-- Contact details: Address, phone, email with icons -->
           <ul id="coordonnees">
             <li>
               <a href="#"><i class="fa fa-map-marker"></i> 1 place république, 75003 Paris</a>
@@ -548,14 +611,18 @@
             <li><a href="#"><i class="fa fa-envelope"></i> contact@klivio.fr</a></li>
           </ul>
         </div>
+        <!-- Authentication buttons: Hidden on mobile -->
         <div class="footer-buttons">
           <button id="btnFooterConn">Connexion</button>
           <button id="btnFooterInsc">Inscription</button>
         </div>
       </nav>
+      <!-- Horizontal divider line -->
       <div class="footerDivider"></div>
+      <!-- Footer bottom: Copyright and social media links -->
       <div>
         <p>© Klivio - 2025</p>
+        <!-- Social media links: Facebook, Twitter, Instagram, LinkedIn -->
         <ul>
           <li><a href="#" class="suivezNous">Suivez - nous</a></li>
           <li><a href="#"><i class="fa fa-facebook social-icon"></i></a></li>
