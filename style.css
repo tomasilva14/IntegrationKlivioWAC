@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
   --principal-color: #152237;
   --secondary-color: #44dd8a;
@@ -5,18 +7,18 @@
   --gradient: linear-gradient(90deg, #44dd8a 0%, #15b7e2 100%);
   --text-color: #4a4a4a;
   --border-radius: 6px;
-  
+
   /* Fluid spacing using clamp() - scales between mobile (394px) and desktop */
   --spacing-xs: clamp(0.5rem, 1vw, 0.625rem);
   --spacing-sm: clamp(0.75rem, 2vw, 1.25rem);
   --spacing-md: clamp(1.25rem, 3vw, 2.5rem);
   --spacing-lg: clamp(2rem, 4vw, 3.75rem);
   --spacing-xl: clamp(2.5rem, 5vw, 5rem);
-  
+
   /* Container max-width */
   --container-max-width: 1504px;
   --container-padding: clamp(1rem, 3vw, 1.25rem);
-  
+
   /* Fluid font sizes using clamp() */
   --font-size-xs: clamp(0.75rem, 1.5vw, 0.875rem);
   --font-size-sm: clamp(0.875rem, 2vw, 1rem);
@@ -25,7 +27,7 @@
   --font-size-xl: clamp(1.5rem, 4vw, 2rem);
   --font-size-2xl: clamp(1.75rem, 5vw, 2.5rem);
   --font-size-3xl: clamp(2rem, 6vw, 3rem);
-  
+
   /* Grid gaps */
   --gap-cards: clamp(1.25rem, 4vw, 5.75rem);
   --gap-section: clamp(1.5rem, 5vw, 5rem);
@@ -35,10 +37,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif, arial;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
   letter-spacing: -0.015em;
 }
 
@@ -175,7 +177,7 @@ header {
       width: 100%;
       max-width: min(477px, 100%);
       flex: 1 1 300px;
-      
+
       i {
         position: absolute;
         right: 15px;
@@ -976,7 +978,7 @@ footer {
 
     > div {
       min-width: 150px;
-      
+
       h4 {
         color: white;
         font-size: var(--font-size-xs);
@@ -1113,7 +1115,7 @@ footer {
     font-weight: 700;
     z-index: 99999;
   }
-  
+
   body > * {
     display: none !important;
   }
@@ -1122,7 +1124,7 @@ footer {
 @media (max-width: 800px) {
   header {
     position: relative;
-    
+
     &::after {
       content: "";
       position: absolute;
@@ -1132,12 +1134,12 @@ footer {
       height: 4px;
       background: var(--gradient);
     }
-    
+
     nav {
       justify-content: space-between;
       padding: var(--spacing-sm) var(--spacing-md);
       flex-wrap: nowrap;
-      
+
       .hamburger {
         display: flex !important;
         flex-direction: column;
@@ -1147,7 +1149,7 @@ footer {
         padding: 8px;
         cursor: pointer;
       }
-      
+
       img {
         margin: 0;
       }
@@ -1165,12 +1167,12 @@ footer {
     padding: var(--spacing-xl) var(--spacing-md);
 
     h1 {
-      font-size: clamp(20px, 6vw, 24px);
+      font-size: clamp(32px, 6vw, 24px);
       margin-bottom: var(--spacing-md);
     }
 
     p {
-      font-size: clamp(12px, 3.5vw, 14px);
+      font-size: clamp(23px, 3.5vw, 14px);
       margin-bottom: var(--spacing-sm);
     }
 
@@ -1186,9 +1188,11 @@ footer {
     padding: var(--spacing-lg) var(--spacing-md);
 
     h2 {
-      font-size: clamp(18px, 5vw, 22px);
-      text-align: left;
+      text-align: center;
       padding-left: 0;
+      font-size: 30px;
+      font-weight: bolder;
+      margin-bottom: var(--spacing-xl);
     }
 
     #container {
@@ -1213,9 +1217,11 @@ footer {
     padding: var(--spacing-lg) var(--spacing-md);
 
     h2 {
-      font-size: clamp(18px, 5vw, 22px);
-      text-align: left;
+      text-align: center;
       padding-left: 0;
+      font-size: 30px;
+      font-weight: bolder;
+      margin-bottom: var(--spacing-xl);
     }
 
     #container {
@@ -1240,8 +1246,11 @@ footer {
     padding: var(--spacing-xl) var(--spacing-md);
 
     h2 {
-      font-size: clamp(20px, 6vw, 24px);
       text-align: center;
+      padding-left: 0;
+      font-size: 30px;
+      font-weight: bolder;
+      margin-bottom: var(--spacing-xl);
     }
 
     #containerReviews {
@@ -1255,34 +1264,36 @@ footer {
       padding: 0 var(--spacing-sm);
       align-items: center;
       text-align: center;
-      
+
       img {
         align-self: center;
       }
-      
+
       h3 {
         text-align: center;
         width: 100%;
       }
-      
+
       .rating {
         text-align: center;
         width: 100%;
       }
-      
+
       p {
-        text-align: center;
+        text-align: left;
       }
     }
   }
 
   #advantage {
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: var(--spacing-xl) var(--spacing-xl);
 
     h2 {
-      font-size: clamp(20px, 6vw, 24px);
-      text-align: left;
-      align-self: flex-start;
+      text-align: center;
+      padding-left: 0;
+      font-size: 30px;
+      font-weight: bolder;
+      margin-bottom: var(--spacing-xl);
     }
 
     #containerAllAdvantages {
@@ -1294,9 +1305,9 @@ footer {
       flex: 1 1 100%;
       min-width: 100%;
       padding: 0;
-      
+
       ul li p {
-        font-size: clamp(14px, 4vw, 16px);
+        font-size: clamp(20px, 4vw, 16px);
       }
     }
 
@@ -1307,12 +1318,14 @@ footer {
   }
 
   #crateForm {
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: var(--spacing-xl) var(--spacing-xl);
 
     h2 {
-      font-size: clamp(20px, 6vw, 24px);
-      text-align: left;
-      align-self: flex-start;
+      text-align: center;
+      padding-left: 0;
+      font-size: 30px;
+      font-weight: bolder;
+      margin-bottom: var(--spacing-xl);
     }
 
     #containerAllCreate {
@@ -1324,7 +1337,7 @@ footer {
       flex: 1 1 100%;
       min-width: 100%;
       padding: 0;
-      
+
       ul li p {
         font-size: clamp(14px, 4vw, 16px);
       }
@@ -1338,31 +1351,44 @@ footer {
 
   #aboutKlivio {
     #containerAllAbout {
-      flex-direction: column-reverse;
-    }
-
-    #imgDiv {
-      max-width: 100%;
-      min-width: 100%;
-      min-height: 400px;
-      flex: 1 1 100%;
-      padding: var(--spacing-md);
+      flex-direction: column;
     }
 
     #containerAdvantages {
-      display: none;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      flex: 1 1 auto;
+      padding: var(--spacing-xl);
+    }
+
+    #imgDiv {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      min-height: 400px;
+      flex: 1 1 auto;
+      padding: var(--spacing-md);
+      background-color: var(--principal-color);
+
+      img{
+        width: 65%;
+      }
     }
   }
 
   #contactUs {
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: var(--spacing-xl) var(--spacing-xl);
 
     h2 {
       font-size: clamp(20px, 6vw, 24px);
+      margin-bottom: var(--spacing-xl);
     }
 
     #underline {
-      margin-bottom: var(--spacing-lg);
+      display: none;
     }
 
     form {
@@ -1379,7 +1405,7 @@ footer {
       }
 
       button {
-        width: auto;
+        width: 100%;
         padding: 12px 50px;
         font-size: 14px;
       }
@@ -1388,6 +1414,14 @@ footer {
 
   footer {
     padding-bottom: var(--spacing-md);
+
+    #footerLine {
+      width: 100%;
+      height: 18px;
+      background: var(--gradient);
+      display: block;
+      margin: 0%;
+    }
 
     nav {
       flex-direction: column;
@@ -1411,18 +1445,37 @@ footer {
         h4 {
           font-size: clamp(14px, 4vw, 16px);
           margin-bottom: var(--spacing-md);
+          text-align: center;
         }
 
         ul {
           li {
             margin-bottom: var(--spacing-sm);
-            font-size: clamp(12px, 3.5vw, 14px);
-            
+
             a {
               display: flex;
               align-items: center;
               justify-content: center;
               gap: 8px;
+              font-size: clamp(14px, 3.5vw, 17px);
+            }
+          }
+        }
+
+        #coordonnees {
+          text-align: left;
+          margin: 0% 15%;
+          li {
+            a {
+              display: grid;
+              grid-template-columns: 20px 1fr;
+              align-items: start;
+              gap: 10px;
+              font-size: clamp(14px, 3.5vw, 17px);
+
+              i {
+                text-align: left;
+              }
             }
           }
         }
