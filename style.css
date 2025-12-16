@@ -252,7 +252,7 @@ header nav #signUpBtn {
   border-radius: var(--border-radius);
   color: var(--principal-color);
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 /* Formations */
