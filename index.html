@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Main HTML document for Klivio e-learning platform -->
 <html lang="fr">
   <head>
     <!-- Character encoding: UTF-8 for international character support -->
@@ -49,35 +48,23 @@
     <title>Klivio - Formations en Développement Personnel</title>
   </head>
   <body>
-    <!-- Accessibility: Skip link allows keyboard users to jump to main content -->
-    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
-    
-    <!-- Header: Main navigation bar (fixed at top, contains logo, menu, search, buttons) -->
     <header>
       <nav id="navBar">
-        <!-- Logo: Brand image with alt text for accessibility and SEO -->
         <img src="img/logo.png" alt="Logo Klivio" width="168" height="62" />
-        
-        <!-- Hamburger menu: Mobile navigation toggle (3 horizontal lines) -->
-        <div class="hamburger">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">
           <span></span>
           <span></span>
           <span></span>
-        </div>
-        
-        <!-- Navigation links: Main menu items (hidden on mobile) -->
+        </label>
         <div class="nav-links">
           <a href="#">Les formations</a>
         </div>
-        
-        <!-- Search bar: Course search input with icon (centered on desktop) -->
         <div id="searchBar">
           <label for="search-input" class="sr-only">Rechercher une formation</label>
           <input id="search-input" type="search" placeholder="Recherche" autocomplete="off" />
           <i class="fa fa-search"></i>
         </div>
-
-        <!-- Authentication buttons: Sign in and sign up (hidden on mobile) -->
         <div id="navBarBtn">
           <button id="signInBtn">Connexion</button>
           <button id="signUpBtn">Inscription</button>
@@ -87,6 +74,7 @@
 
     <!-- Main content: Contains all page sections -->
     <main id="main-content">
+      
       <!-- Hero section: Large banner with headline, tagline, and call-to-action -->
       <section id="heroSection">
         <h1>KLIVIO, L'ALLIÉ DE VOTRE PROGRESSION</h1>
